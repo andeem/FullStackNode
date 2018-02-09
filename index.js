@@ -9,6 +9,7 @@ app.use(bodyParser.json())
 morgan.token('data', (req, res) => JSON.stringify(req.body))
 app.use(morgan(':method :url :data :status :res[content-length] - :response-time ms'))
 app.use(cors())
+app.use(express.static('build'))
 
 let persons = [
     {
