@@ -82,7 +82,7 @@ app.post('/api/persons', (req, res) => {
         Person
             .find({ name: newPerson.name })
             .then(result => {
-                if (result) {
+                if (result.size > 0) {
                     res.status(400).json({ error: 'name must be unique' })
                 } else {
                     newPerson
