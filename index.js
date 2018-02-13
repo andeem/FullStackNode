@@ -14,10 +14,6 @@ app.use(express.static('build'))
 
 
 
-let persons = [
-
-]
-
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
